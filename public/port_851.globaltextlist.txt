@@ -1,0 +1,157 @@
+Id;Default
+105;
+65; “%4.3f mm$"
+109;%3.2f
+107;%3.2f mm
+81;%4.2f Hz
+71;%4.2f mm
+82;%4.2f s
+68;%4.2fmm
+5;%d
+64;%f4.2mm
+14;%s
+67;4.2fmm
+98;8888.888 mm
+66;8888.888mm
+51;A     M
+50;A    M
+13;abc
+55;Admin
+45;Analogue In
+52;Auto  Man
+106;Axes speed
+153;Buffer Clear
+147;Change Offset
+148;Change Setpoint
+127;dd
+70;Depth
+47;Depth (Lower)
+48;Depth (Upper)
+41;Depth axis
+26;Depth NOT
+25;Depth POT
+46;Depth upper
+116;Depth Z
+43;Digital In
+44;Digital Out
+137;Drive Reset
+80;Duration
+90;Dynamic depth
+91;Dynamic Z
+20;E-Stop OK
+146;Enable Set
+92;Enc changeover
+94;Enc switch
+118;Enc switch  1
+119;Enc switch 2
+93;Enc switch pt
+31;Encoder C/O
+89;Encoder switch
+126;Encoder Switch Points
+88;Encoder switchover
+134;Fast
+149;Find Wall
+79;Frequency
+49;GroupBox
+74;High
+69;Horizontal
+39;Horizontal axis
+24;Horizontal NOT
+23;Horizontal POT
+115;Horizontal Y
+37;I/O
+1;Jog X +
+3;Jog X -
+4;Jog Y +
+6;Jog Y -
+8;Jog Z +
+10;Jog Z -
+30;Laser pointer
+77;Laser pointer offset
+72;Low
+121;Lower switch
+11;Main
+12;MAIN.stateMsg
+132;Man
+73;Medium
+135;Meduim
+129;No Render
+58;None
+85;Offset
+53;Operation
+57;Operator
+2;Pause
+102;Pause PB
+104;Pause PB lamp
+0;Print
+138;Print Abort
+140;Print Buffer $R$NClear
+139;Print Buffer Clear
+42;Print controller
+84;Print head offset
+86;Print heads
+83;Print quality
+154;Print Quality
+100;Print quality : %s
+76;Print quality horizontal index
+75;Print quality index
+99;Print quality select
+133;Print Speed
+155;Print Speeds
+78;Print spit
+19;Purge
+29;Purge PB
+35;Purge PB lamp
+130;Render
+128;Render  No Render
+18;Reset
+60;Save start
+61;Save start$R$Nposition
+56;Service
+117;Set
+62;Set image start
+9;Settings
+54;Shutdown
+36;Shutdown lamp
+136;Slow
+123;Speed 1
+124;Speed 2
+125;Speed 3
+108;Speeds
+59;Spit
+101;Spit PB
+103;Spit PB lamp
+16;Start
+32;Start 
+27;Start PB
+33;Start PB lamp
+15;Status
+17;Stop
+28;Stop PB
+34;Stop PB lamp
+87;System
+97;Travel
+122;Upper switch
+120;Upper switch  1
+63;Vertical
+40;Vertical axis
+7;Vertical axis jog parameters
+22;Vertical NOT
+21;Vertical POT
+95;Vertical travel
+96;Vertical travel : %4.2f mm
+114;Vertical X
+131;VPI
+113;Wall Offset
+110;Wall Sensors
+111;X %4.2f mm
+144;X Print Start
+151;X Start %4.2f mm
+141;X Vertical
+38;X-Axis
+112;Y %4.2f mm
+142;Y Horizontal
+145;Y Print Start
+152;Y Start %4.2f mm
+150;Z %4.2f mm
+143;Z Depth

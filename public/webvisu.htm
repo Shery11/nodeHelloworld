@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<!-- Material Design Theming -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <script language="javascript" src="webvisu.js"></script>
+	<script language="javascript" src="browsercontrol_ext0.js"></script>
+  <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
+
+<script>
+  // Initialize Firebase
+  var myVar = setInterval(updater ,3000);
+
+     function updater(){
+    console.log("running after 3")
+    var user = firebase.auth().currentUser;
+
+      if (user) {
+          console.log("User signed in");
+
+          if (navigator.geolocation) {
+             
+           navigator.geolocation.getCurrentPosition(function(position){
+
+
+            var location = {
+              latitude : position.coords.latitude,
+              longitude : position.coords.longitude
+            }
+
+
+            firebase.database().ref('users/' + user.uid).update({
+             lastActive: firebase.database.ServerValue.TIMESTAMP,
+             location : location
+            });
+                
+
+          });
+      
+
+        } else {
+
+          alert("Geolocation is not supported by this browser.");
+            firebase.database().ref('users/' + user.uid).update({
+             lastActive: firebase.database.ServerValue.TIMESTAMP,
+             location : "Can't get location"
+            });
+       
+        }
+
+
+      } else {
+        // No user is signed in.
+        console.log("User not signed in");
+      }
+   }
+
+  var config = {
+    apiKey: "AIzaSyDPYExHLO8nXbP40zoO9K-kOjJtDQDXhaU",
+    authDomain: "veescape-vsp1000.firebaseapp.com",
+    databaseURL: "https://veescape-vsp1000.firebaseio.com",
+    projectId: "veescape-vsp1000",
+    storageBucket: "veescape-vsp1000.appspot.com",
+    messagingSenderId: "500981869906"
+  };
+  firebase.initializeApp(config);
+
+  //Handle Account Status
+firebase.auth().onAuthStateChanged(function(user) {
+  if(!user) {
+    window.location = 'index.html'; //If User is not logged in, redirect to login page
+  }
+});
+    
+    ////////////////MAP////////
+
+
+</script>
+
+</head>
+
+<body onload="new Webvisu('background', 'foreground', true)">
+	<div style="position: absolute; left: 0px; top: 0px;">
+		<canvas id="background" width="700" height="500" style="position: absolute; left: 0px; top: 0px; z-index: 100;">Zeescape Console not supported due to missing browser feature HTML5-Canvas</canvas>
+		<canvas id="foreground" width="700" height="500" style="position: absolute; left: 0px; top: 0px; z-index: 200;">Zeescape Console not supported due to missing browser feature HTML5-Canvas</canvas>
+	</div>
+    
+    
+</body>
+</html>
